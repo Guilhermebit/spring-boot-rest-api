@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "c2e1100c-0f51-4e7a-9810-bd1d2c5f0863",
+		"name": "Spring Boot API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6209270"
+	},
+	"item": [
+		{
+			"name": "Product-API",
+			"item": [
+				{
+					"name": "POST Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\" : \"Playstation 2\",\r\n   \"price_in_cents\" : 100000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/product",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Bearer",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzcHJpbmctcmVzdC1hcGkiLCJzdWIiOiJndWlsaGVybWUiLCJleHAiOjE2OTU3OTYyMTB9.S3_78tANd61mBAVcsqd5WAmVjXc2oK4pndegzP94B2w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/product",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET One Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/product/49c74b02-3f7a-4af6-9b72-04622769adc1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"product",
+								"49c74b02-3f7a-4af6-9b72-04622769adc1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Products By an Range",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/product/value/1/600000",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"product",
+								"value",
+								"1",
+								"600000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\" : \"Playstation 10\",\r\n   \"price_in_cents\" : 800000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/product/857240ea-e00e-47e0-9f7a-824055c5c0bf",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"product",
+								"857240ea-e00e-47e0-9f7a-824055c5c0bf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/product/49c74b02-3f7a-4af6-9b72-04622769adc1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"product",
+								"49c74b02-3f7a-4af6-9b72-04622769adc1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth-API",
+			"item": [
+				{
+					"name": "POST Sign-Up User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"User2\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Bearer",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzcHJpbmctcmVzdC1hcGkiLCJzdWIiOiJndWlsaGVybWUiLCJleHAiOjE2OTU3OTYyMTB9.S3_78tANd61mBAVcsqd5WAmVjXc2oK4pndegzP94B2w",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"User1\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8081",
+			"type": "string"
+		},
+		{
+			"key": "Token",
+			"value": "Bearer",
+			"type": "string"
+		}
+	]
+}
