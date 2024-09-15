@@ -7,6 +7,10 @@ Welcome to my Spring Boot app!
 
 This project was developed to demonstrate how to build an API using Spring Boot. It has table relationships in the database and comprehensive unit and integration testing.
 
+## This project has the following architecture: 
+
+![spring_boot_api_diagram](https://github.com/user-attachments/assets/b4a65d4e-fdb0-4c01-9fcd-0c4bed99af42)
+
 ## Tecnologies
 - ✅ Java 17
 - ✅ SpringBoot
