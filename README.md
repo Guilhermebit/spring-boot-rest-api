@@ -47,7 +47,8 @@ docker-compose up
 ```
 2. The API will be accessible at http://localhost:8081
 # Api EndPoints
-To test the HTTP requests below, the Postman tool was used.<br />
+To test the HTTP requests below, the Postman tool was used.  
+If you choose to use `Postman`, you can download the `Collection` by clicking [here](https://github.com/Guilhermebit/spring-boot-rest-api/blob/master/Contents/Spring%20Boot%20API.postman_collection.json), and import it into your Postman.  
 Here you can download Postman: https://www.postman.com/downloads/
 + The user must have the **`TOKEN`** and an **`ADMIN`** role to access the routes: 
     + `POST /product`
