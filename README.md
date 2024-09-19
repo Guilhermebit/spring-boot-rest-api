@@ -7,6 +7,10 @@ Welcome to my Spring Boot app!
 
 This project was developed to demonstrate how to build an API using Spring Boot. It has table relationships in the database and comprehensive unit and integration testing.
 
+## This project has the following architecture: 
+
+![spring_boot_api_diagram](https://github.com/user-attachments/assets/b4a65d4e-fdb0-4c01-9fcd-0c4bed99af42)
+
 ## Tecnologies
 - ✅ Java 17
 - ✅ SpringBoot
@@ -43,7 +47,8 @@ docker-compose up
 ```
 2. The API will be accessible at http://localhost:8081
 # Api EndPoints
-To test the HTTP requests below, the Postman tool was used.<br />
+To test the HTTP requests below, the Postman tool was used.  
+If you choose to use `Postman`, you can download the `Collection` by clicking [here](https://github.com/Guilhermebit/spring-boot-rest-api/blob/master/Contents/Spring%20Boot%20API.postman_collection.json), and import it into your Postman.  
 Here you can download Postman: https://www.postman.com/downloads/
 + The user must have the **`TOKEN`** and an **`ADMIN`** role to access the routes: 
     + `POST /product`
