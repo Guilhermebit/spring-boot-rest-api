@@ -46,6 +46,33 @@ $ git clone https://github.com/Guilhermebit/spring-boot-rest-api.git
 docker-compose up 
 ```
 2. The API will be accessible at http://localhost:8081
+
+## ⚙️ Build Script  
+This project includes a [Python script](./build.py) that automates the application build process.  
+
+**To run the script, navigate to the project directory and execute:**  
+
++ On Windows:  
+```
+py build.py
+```
++ On Unix-based systems:  
+```
+python build.py
+```
+
+The script performs the following steps:  
+
++ Compiling an application: Use Maven Wrapper to compile an application with the correct command for the operating system:  
+ 
+  + **Windows:** ```mvnw.cmd clean package```
+  + **Unix systems (Linux/Mac):** ```./mvnw clean package```
+ 
++ Stop and remove all Docker containers: Run ```docker-compose down``` to ensure all containers are stopped and removed.  
++ Building and starting Docker containers: Use ```docker-compose up --build -d``` to build Docker images and start containers in the background.  
+
+The script was designed to simplify the process of building, stopping and restarting containers, saving time and making the process faster.  
+
 # Api EndPoints
 To test the HTTP requests below, the Postman tool was used.  
 If you choose to use `Postman`, you can download the `Collection` by clicking [here](https://github.com/Guilhermebit/spring-boot-rest-api/blob/master/Contents/Spring%20Boot%20API.postman_collection.json), and import it into your Postman.  
