@@ -50,6 +50,8 @@ docker-compose up
 ## ⚙️ Build Script  
 This project includes a [Python script](./build.py) that automates the application build process.  
 
+Here you can download Python: https://www.python.org/downloads/  
+
 **To run the script, navigate to the project directory and execute:**  
 
 + On Windows:  
